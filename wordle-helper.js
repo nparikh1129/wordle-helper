@@ -205,7 +205,9 @@ function createWordList() {
 }
 
 function updateWordList() {
-  wordListHeader.innerHTML = `${wordListWords.length}${'&nbsp;'} possible words`;
+  let headerText = `${wordListWords.length}${'&nbsp;'} possible `;
+  headerText += wordListWords.length == 1 ? "word" : "words";
+  wordListHeader.innerHTML = headerText;
 
   let html = "<ul class='wordList'>"
   for (let word of wordListWords) {

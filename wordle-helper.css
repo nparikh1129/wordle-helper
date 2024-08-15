@@ -163,7 +163,6 @@ main {
   height: 596px;
   overflow-y: auto;
   margin: 0 0 0 25px;
-  scrollbar-color: #818384 #3a3a3c;
 }
 .wordList {
   list-style: none;
@@ -179,17 +178,19 @@ li {
   text-transform: capitalize;
 }
 
-
-/* Scrollbar styling for Safari */
+/* Word list scrollbar styling */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
   background: #3a3a3c;
+  border-top-left-radius: 3px;
 }
 ::-webkit-scrollbar-thumb {
   background: #818384;
+  border-radius: 100px;
+  min-height: 28px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #AAAAAA;
 }

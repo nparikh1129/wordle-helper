@@ -1,6 +1,7 @@
 ## TODO
 - understand how scrollbar and related boxes got their height. don't use exact pixels for height.
-- use SVG for backspace button
+- scrollbar webkit styles are changing the style on the page's scrollbar
+
 
 ## Features
 - color keyboard keys like in the game
