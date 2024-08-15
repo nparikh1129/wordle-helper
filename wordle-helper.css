@@ -165,9 +165,6 @@ main {
   margin: 0 0 0 25px;
   scrollbar-color: #818384 #3a3a3c;
 }
-.wordListContent::-webkit-scrollbar-thumb:hover {
-  background-color: #5749d2;
-}
 .wordList {
   list-style: none;
   padding: 0;
@@ -183,7 +180,7 @@ li {
 }
 
 
-/* Scrollbar styling on Safari */
+/* Scrollbar styling for Safari */
 ::-webkit-scrollbar {
   width: 15px;
 }
