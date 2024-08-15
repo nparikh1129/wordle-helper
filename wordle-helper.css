@@ -8,6 +8,14 @@
   background-color: #3a3a3c;;
 }
 
+
+@font-face {
+  font-family: "FranklinNormal";
+  src: url("fonts/franklin-normal-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
 @font-face {
   font-family: "FranklinRegular";
   src: url("fonts/LibreFranklin-Regular.ttf") format("truetype");
@@ -24,7 +32,6 @@
 
 @font-face {
   font-family: "NYTKarnakCondensed";
-  /* src: url("fonts/karnakcondensed-normal-700.woff2") format("woff2"); */
   src: url("fonts/karnakcondensed-normal-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal
@@ -38,7 +45,7 @@ body {
 h1 {
   text-align: center;
   font-size: 42px;
-  font-family: NYTKarnakCondensed;
+  font-family: "NYTKarnakCondensed";
   margin-bottom: 45px;
 }
 main {
@@ -81,8 +88,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.9rem;
-  font-family: FranklinBold, sans-serif;
+  font-family: "FranklinNormal";
+  font-size: 32px;
   text-transform: uppercase;
   cursor: pointer;
   user-select: none;
@@ -124,8 +131,8 @@ main {
   border: none;
   background-color: #818384;
   border-radius: 4px;;
-  font-size: 1.25em;
-  font-weight: bold;
+  font-family: "FranklinNormal";
+  font-size: 20px;
   color: white;
   cursor: pointer;
 }
@@ -165,7 +172,6 @@ main {
   list-style: none;
   padding: 0;
   margin: 0;
-
 }
 
 li {
