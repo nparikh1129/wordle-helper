@@ -1,0 +1,189 @@
+.correct {
+  background-color: #538d4e;
+}
+.present {
+  background-color: #b59f3b;
+}
+.absent {
+  background-color: #3a3a3c;;
+}
+
+@font-face {
+  font-family: "FranklinRegular";
+  src: url("fonts/LibreFranklin-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FranklinBold";
+  src: url("fonts/LibreFranklin-Bold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NYTKarnakCondensed";
+  src: url("fonts/NYTKarnakCondensed.ttf") format("truetype");
+}
+
+
+body {
+  background-color: #121213;
+  color: white;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 42px;
+  font-family: NYTKarnakCondensed;
+  margin-bottom: 45px;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+
+#columns {
+  display: grid;
+  grid-template-columns: 500px 300px;
+  grid-template-rows: 660px;
+}
+#left {
+  grid-column: 1;
+}
+#right {
+  grid-column: 2;
+}
+
+#boardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.board {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 5px;
+  width: 330px;
+  height: 400px;
+}
+.boardRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px; 
+}
+.boardTile {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.9rem;
+  font-family: FranklinBold, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+}
+.empty {
+  width: 58px;
+  height: 58px;
+  border: 2px solid #3a3a3c;
+  cursor: default;
+}
+.tbd {
+  width: 58px;
+  height: 58px;
+  border: 2px solid #565758;
+}
+
+#keyboardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 70px;
+}
+.keyboardRow {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  width: 484px;
+  height: 58px;
+}
+.keyboardKey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 58px;
+  width: 43px;
+  padding: 0;
+  border: none;
+  background-color: #818384;
+  border-radius: 4px;;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.keyboardWideKey {
+  width: 67.5px;
+  font-size: 12px;
+}
+
+
+/* WORD LIST */
+#wordListContainer {
+  height: 100%;
+  border: 2px solid #3a3a3c;
+  border-radius: 4px;
+  margin-left: 58px;
+}
+.wordListBox {
+  height: 660px;
+  overflow: hidden;
+  font-size: 1em;
+  font-family: 'FranklinRegular', sans-serif;
+  
+}
+.wordListHeader {
+  margin: 15px 0 30px 25px;
+}
+.wordListContent {
+  height: 596px;
+  overflow-y: auto;
+  margin: 0 0 0 25px;
+  scrollbar-color: #818384 #3a3a3c;
+}
+.wordListContent::-webkit-scrollbar-thumb:hover {
+  background-color: #5749d2;
+}
+.wordList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+li {
+  width: 70px;
+  padding: 4px 0 4px 1px;
+  border-bottom: 2px solid #3a3a3c;
+  margin-bottom: 7px;
+}
+
+
+/* Scrollbar styling on Safari */
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #3a3a3c;
+}
+::-webkit-scrollbar-thumb {
+  background: #818384;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
