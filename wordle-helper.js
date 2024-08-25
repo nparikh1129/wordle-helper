@@ -119,6 +119,9 @@ function handlePhysicalKeyDown(evt) {
   function isAlpha(char) {
     return /^[a-z]$/i.test(char);
   }
+  if (evt.metaKey || evt.ctrlKey || evt.altKey) {
+    return;
+  }
   if (isAlpha(evt.key)) {
     processLetterEntry(evt.key.toUpperCase());
   }
