@@ -1,8 +1,3 @@
-// make board elem
-// make the row elems
-// make the tile elems
-// hold references to all of the nodes
-
 const KEYBOARD_ROW_1 = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'];
 const KEYBOARD_ROW_2 = ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'];
 const KEYBOARD_ROW_3 = ['Z', 'X', 'C', 'V', 'B', 'N', 'M']
@@ -250,6 +245,7 @@ function letterPresencesMatch(word, letters) {
   word = word.toUpperCase();
   let presentLetters = [];
   let absentLetters = [];
+  let correctLetters = [];
   for (let i = 0; i < letters.length; i++) {
     if (letters[i].state == "present") {
       presentLetters.push(letters[i].letter);
@@ -257,6 +253,13 @@ function letterPresencesMatch(word, letters) {
     else if (letters[i].state == "absent") {
       absentLetters.push(letters[i].letter);
     }
+    else if (letters[i].state == "correct") {
+      correctLetters.push(letters[i].letter);
+    }
+  }
+  // Remove correct letters from word because their presence is already accounted for.
+  for (let letter of correctLetters) {
+    word = word.replace(letter, "");
   }
   for (let letter of presentLetters) {
     if (!word.includes(letter)) {
