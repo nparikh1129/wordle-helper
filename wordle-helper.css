@@ -24,14 +24,7 @@
 }
 
 @font-face {
-  font-family: "FranklinBold";
-  src: url("fonts/LibreFranklin-Bold.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "NYTKarnakCondensed";
+  font-family: "KarnakCondensed";
   src: url("fonts/karnakcondensed-normal-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal
@@ -45,7 +38,7 @@ body {
 h1 {
   text-align: center;
   font-size: 42px;
-  font-family: "NYTKarnakCondensed";
+  font-family: "KarnakCondensed";
   margin-bottom: 45px;
 }
 main {
@@ -153,7 +146,7 @@ main {
   height: 660px;
   overflow: hidden;
   font-size: 1em;
-  font-family: 'FranklinRegular', sans-serif;
+  font-family: "FranklinRegular", sans-serif;
   
 }
 .wordListHeader {
@@ -184,7 +177,7 @@ li {
 }
 ::-webkit-scrollbar-track {
   background: #3a3a3c;
-  border-top-left-radius: 3px;
+  border-top-left-radius: 2px;
 }
 ::-webkit-scrollbar-thumb {
   background: #818384;
